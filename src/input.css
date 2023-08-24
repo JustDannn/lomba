@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+.btn {
+  @apply shadow-md py-3 px-6 rounded-md transition duration-300;
+}
+
+.btn-purple {
+  @apply bg-bookmark-purple text-white;
+}
+
+.btn-white {
+  @apply bg-bookmark-white;
+}
+
+.btn-pink {
+  @apply bg-pink-lucu text-white;
+}
+
+.btn-kuning {
+  @apply bg-kuning-asik text-white;
+}
+
+.swiper img {
+  display: block;
+  margin: auto;
+}
+
+.modal-overlay {
+  backdrop-filter: blur(5px);
+}
+
+.modal-container {
+  max-height: 80vh;
+}
+
+.w-1024px {
+  width: 1024px;
+}
