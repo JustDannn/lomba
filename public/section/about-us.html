@@ -1,9 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../output.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="sticky top-0 z-20">
+    <nav class="bg-white border-gray-200">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between gap-5 mx-auto p-4">
+        <a href="../index.html" class="flex items-center">
+          <img src="../../images/tk-amaliah-logo-removebg-preview.png" class="h-8 mr-3" alt="Tk Amaliah Logo" />
+          <p class="self-center text-2xl font-bold whitespace-nowrap text-pink-lucu">
+            TK<span class="text-kuning-asik">Amaliah</span>
+          </p>
+        </a>
+        <div class="flex items-center mx-auto md:order-2">
+          <button type="button" data-dropdown-toggle="beranda-dropdown-menu"
+            class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+            </svg>
+            Beranda
+          </button>
+          <!-- Dropdown -->
+          <div
+            class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+            id="beranda-dropdown-menu">
+            <ul class="py-2 font-medium" role="none">
+              <li>
+                <a href="./berita.html"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  role="menuitem">
+                  <div class="inline-flex items-center">Berita</div>
+                </a>
+              </li>
+              <li>
+                <a href="./galery.html"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  role="menuitem">
+                  <div class="inline-flex items-center">Galery</div>
+                </a>
+              </li>
+              <li>
+                <a href="./video.html"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  role="menuitem">
+                  <div class="inline-flex items-center">Video</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center mx-auto md:order-2">
+            <button type="button" data-dropdown-toggle="profil-dropdown-menu"
+              class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+              </svg>
+              Profil
+            </button>
+            <!-- Dropdown -->
+            <div
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+              id="profil-dropdown-menu">
+              <ul class="py-2 font-medium" role="none">
+                <li>
+                  <a href="./about-us.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">
+                    <div class="inline-flex items-center">
+                      Tentang Sekolah
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./vimis.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">
+                    <div class="inline-flex items-center">Visi dan Misi</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./kepsek.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">
+                    <div class="inline-flex items-center">
+                      Kepala Sekolah
+                  </a>
+                </li>
+                <li>
+                  <a href="./prestasi.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">
+                    <div class="inline-flex items-center">Prestasi Sekolah</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex items-center mx-auto md:order-2">
+            <button type="button" data-dropdown-toggle="data-dropdown-menu"
+              class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+              </svg>
+              Data
+            </button>
+            <!-- Dropdown -->
+            <div
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+              id="data-dropdown-menu">
+              <ul class="py-2 font-medium" role="none">
+                <li>
+                  <a href="./sapras.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">
+                    <div class="inline-flex items-center">Sarana Prasarana</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./tendik.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">
+                    <div class="inline-flex items-center">Tenaga pendidik</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./siswa.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">
+                    <div class="inline-flex items-center">siswa</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">
+                    <div class="inline-flex items-center">中文 (繁體)</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+  </header>
+  <!-- header end -->
+  <!-- section start -->
+  <div class="container my-24 mx-auto md:px-6">
+    <section class="mb-32">
+      <div class="container mx-auto text-center lg:text-left xl:px-32">
+        <div class="flex items-center lg:grid-cols-2">
+          <div class="mb-12 lg:mb-0">
+            <div
+              class="relative z-[1] block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] md:px-12 lg:-mr-14">
+              <h2 class="mb-8 text-3xl font-bold">TK Amaliah</h2>
+              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                Taman Kanak-Kanak didirikan sebagai usaha mengembangkan seluruh
+                segi kepribadian anak didik dalam rangka menjembatani pendidikan
+                dalam keluarga ke pendidikan sekolah. TK merupakan salah satu
+                bentuk pendidikan prasekolah dalam hal ini pendidikan yang
+                membantu pertumbuhan dan perkembangan jasmani dan rohani anak
+                didik diluar lingkungan keluarga sebelum memasuki pendidikan
+                dasar.
+              </p>
+              <div class="mx-auto mb-8 flex md:flex-row md:justify-around lg:justify-between mt-5">
+                <p class="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="mr-2 h-5 w-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Best team
+                </p>
+
+                <p class="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="mr-2 h-5 w-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Best quality
+                </p>
+
+                <p class="mx-auto mb-2 flex items-center md:mx-0 lg:mb-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="mr-2 h-5 w-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Best experience
+                </p>
+              </div>
+              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 mt-5">
+                Kegiatan di Taman Kanak-Kanak tentunya sangat berbeda dengan
+                kegiatan pembelajaran di Sekolah Dasar. Kegiatan di TK
+                dilaksanakan dengan cara bermain sesuai dengan prinsip TK yaitu
+                "bermain sambil belajar dan belajar seraya bermain".Hal ini
+                merupakan cara yang paling efektif, karena dengan bermain anak
+                datap mengembangkan berbagai kreativitas anak didik di TK.
+              </p>
+              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 mt-5">
+                Dengan bermain anak dapat menemukan lingkungan orang lain, dan
+                menemukan dirinya sendiri, sehingga anak dapat bersosialisasi
+                dengan lingkungan tersebut, anak dapat menghargai orang lain,
+                tenggang rasa terhadap orang lain, tolong menolong sesama teman
+                dan yang lebih utama anak dapat menemukan pengalaman baru dalam
+                kegiatan tersebut.
+              </p>
+              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 mt-5">
+                Selain melalui bermain, pendidikan di taman kanak-kanak bisa
+                diajarkan melalui pembiasaan, seperti bagaimana mengucapkan
+                salam, berbagi dengan teman, saling menolong dan sebagaianya dan
+                penanaman konsep bisa melalui bercerita, suri tauladan guru dan
+                lain-lain.
+              </p>
+              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 mt-5">
+                Playgroup dan Taman Kanak-Kanak Amaliah dalam setahun kedepan
+                mempunyai harapan menghasilkan anak-anak yang memiliki
+                kecerdasan emosi yang lebih baik.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <img src="../../images/sebastian-olivos-6NHYu_nqCvA-unsplash.jpg" class="w-full rounded-lg shadow-lg"
+              alt="image" />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-6 mt-8">
+        <a href="../index.html" class="btn bg-bookmark-red text-white hover:bg-bookmark-white hover:text-black m-auto">
+          back
+        </a>
+      </div>
+    </section>
+  </div>
+  <!-- section end -->
+
+  <!-- footer start -->
+  <footer class="bg-kuning-asik text-white py-20 mt-24">
+    <div class="container">
+      <div class="sm:w-3/4 lg:w-2/4 mx-auto">
+        <p class="font-bold uppercase text-center mb-8">Contact Us</p>
+        <h1 class="text-3x1 text-center">mari bergabung dengan Tk Amaliah</h1>
+        <div class="flex flex-col sm:flex-row gap-6 mt-8">
+          <button type="button" class="btn bg-bookmark-red hover:bg-bookmark-white hover:text-black m-auto">
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
 </html>
